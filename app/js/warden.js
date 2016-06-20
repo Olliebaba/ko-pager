@@ -16,7 +16,7 @@ var Warden = function() {
   self.dashboard = ko.observableArray([]);
 
   self.foo = {
-    "fa": "1",
+    "fa": ko.observable("1"),
     "fi": "2"
   }
 
@@ -42,14 +42,23 @@ var Warden = function() {
 
 var warden = new Warden();
 
-
-// use HTML5 history
-pager.useHTML5history = true;
-// use History instead of history
-pager.Href5.history = History;
+// use #!/ instead of the default #
+pager.Href.hash = '#!/';
 // extend your view-model with pager.js specific data
 pager.extendWithPage(warden);
 // apply the view-model using KnockoutJS as normal
 ko.applyBindings(warden);
 // start pager.js
-pager.startHistoryJs();
+pager.start();
+
+
+// // use HTML5 history
+// pager.useHTML5history = true;
+// // use History instead of history
+// pager.Href5.history = History;
+// // extend your view-model with pager.js specific data
+// pager.extendWithPage(warden);
+// // apply the view-model using KnockoutJS as normal
+// ko.applyBindings(warden);
+// // start pager.js
+// pager.startHistoryJs();
