@@ -1,0 +1,23 @@
+<div>
+  <!-- ko stopBinding: true -->
+    <div data-bind="foreach: datas" id="this">
+      <p data-bind="text: fa"></p>
+
+    </div>
+
+
+    <script>
+    var Foobar = function() {
+      var self = this;
+      self.datas = ko.observableArray([{'fa':'a'},{'fa':'b'},{'fa':'c'},{'fa':'d'},{'fa':'e'}]);
+    }
+
+    var foobar = ko.applyBindings(new Foobar(), $('#this')[0])
+    </script>
+
+  <!-- /ko -->
+
+  tables
+          <a data-bind="page-href:'/dashboard'">dashboard</a>
+
+</div>

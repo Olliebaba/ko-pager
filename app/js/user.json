@@ -1,0 +1,13 @@
+{
+  "firstName": "Nemo",
+  "lastName": "B",
+  "dashboard": [{
+    "id": "a1"
+  },{
+    "id": "a2"
+  },{
+    "id": "a3"
+  },{
+    "id": "a4"
+  }]
+}
